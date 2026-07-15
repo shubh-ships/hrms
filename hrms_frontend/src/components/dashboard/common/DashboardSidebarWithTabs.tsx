@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import image1 from "@/assets/AuthIcons/Image1.png";
+
 import React, { useState, useEffect } from "react";
 import {
   Sidebar,
@@ -122,29 +122,29 @@ function DashboardSidebarWithTabs({
               <h2 className="text-base font-semibold text-foreground tracking-tight">
                 {getSectionTitle()}
               </h2>
-              <Image src="/assets/image1.png" alt="Logo" width={30} height={30} />
+              <Image src="/favicon_io/apple-touch-icon.png" alt="Logo" width={40} height={40} className="mix-blend-multiply contrast-125 brightness-110" />
               <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
             </div>
           </div> */}
           <div className="flex items-center justify-start gap-2 py-0.1 group-data-[collapsible=icon]:justify-center">
             <div className="relative flex justify-start pl-0 items-center group-data-[collapsible=icon]:hidden">
               <Image
-                src={image1}
+                src="/favicon_io/apple-touch-icon.png"
                 alt="PulseSeal Logo"
-                width={50}
-                height={50}
-                className="object-contain"
+                width={65}
+                height={65}
+                className="object-contain mix-blend-multiply contrast-125 brightness-110"
                 priority
               />
               <span className="text-2xl font-bold text-foreground ml-3">PulseSeal</span>
             </div>
             <div className="hidden group-data-[collapsible=icon]:flex justify-center items-center">
               <Image
-                src={image1}
+                src="/favicon_io/apple-touch-icon.png"
                 alt="PulseSeal Logo"
-                width={40}
-                height={40}
-                className="object-contain"
+                width={50}
+                height={50}
+                className="object-contain mix-blend-multiply contrast-125 brightness-110"
                 priority
               />
             </div>

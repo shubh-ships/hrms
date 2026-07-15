@@ -4,9 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import Logo from "@/assets/AuthIcons/Image.png"
 import GoogleLogo from "@/assets/AuthIcons/google.png"
-import AuthBackgroundImage from "@/assets/AuthIcons/Image1.png"
 import Image from 'next/image'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { useRouter } from 'next/navigation'
@@ -216,16 +214,18 @@ const Login: React.FC = () => {
       <div className="relative hidden w-1/2 flex-col items-center justify-center md:flex">
         <Link href="/">
           <div
-            className="absolute h-[50px] w-[50px] top-8 left-8 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${AuthBackgroundImage.src})` }}
+            className="absolute h-[50px] w-[50px] top-8 left-8 bg-contain bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(/favicon_io/apple-touch-icon.png)` }}
           >
           </div>
         </Link>
         <div className="w-full max-w-lg p-4">
           <Image
-            src={Logo}
-            alt="A diverse group of people collaborating"
-            className="w-full h-auto"
+            src="/minthr.webp"
+            alt="MintHR Dashboard Preview"
+            width={600}
+            height={400}
+            className="w-full h-auto rounded-2xl shadow-xl"
           />
         </div>
       </div>

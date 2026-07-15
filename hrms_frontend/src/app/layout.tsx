@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pulse Seal",
-  description: "PulseSeal a software for Task management",
+  title: "MintHR",
+  description: "MintHR a software for Task management",
 };
 
 export default function RootLayout({

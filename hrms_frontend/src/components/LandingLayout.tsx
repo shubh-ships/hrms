@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useInView, AnimatePresence, useMotionValue, useSpring } from "framer-motion";
-import logo2 from "@/assets/AuthIcons/Image1.png";
+
 import {
     Mail,
     Phone,
@@ -248,8 +248,8 @@ const GradientButton: React.FC<{
         springProgress,
         [0, 1],
         [
-            'linear-gradient(90deg, #df658c 0%, #656beb 100%)',
-            'linear-gradient(90deg, #656beb 0%, #df658c 100%)'
+            'linear-gradient(90deg, #10b981 0%, #064e3b 100%)',
+            'linear-gradient(90deg, #064e3b 0%, #10b981 100%)'
         ]
     );
 
@@ -289,32 +289,32 @@ const LandingPage: React.FC = () => {
 
     const features: FeatureItem[] = [
         {
-            icon: <Target className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />,
+            icon: <Target className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600" />,
             title: "Task-Based Login/Logout",
             description: "Start and end your day with clear task objectives. No vague clock-ins, just purposeful productivity tracking."
         },
         {
-            icon: <Timer className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />,
+            icon: <Timer className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600" />,
             title: "TAT & Smart Reminders",
             description: "Turnaround time alerts keep projects on schedule with intelligent notifications and deadline management."
         },
         {
-            icon: <UserCheck className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />,
+            icon: <UserCheck className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600" />,
             title: "Approval Workflow System",
             description: "Manager-based task approvals ensure quality control and maintain accountability standards."
         },
         {
-            icon: <Camera className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />,
+            icon: <Camera className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600" />,
             title: "Proof of Work Upload",
             description: "Visual evidence for every completed task builds trust and provides clear progress documentation."
         },
         {
-            icon: <TrafficCone className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />,
+            icon: <TrafficCone className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600" />,
             title: "Real-Time Signal Lights",
             description: "Instant Red/Yellow/Green status indicators show team performance at a glance."
         },
         {
-            icon: <Trophy className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />,
+            icon: <Trophy className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600" />,
             title: "Performance Leaderboards",
             description: "Gamified scorecards motivate teams and recognize top performers with transparent rankings."
         }
@@ -511,14 +511,14 @@ const LandingPage: React.FC = () => {
                             transition={{ duration: 0.2 }}
                         >
                             <Image
-                                src={logo2}
-                                className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8"
-                                alt="PulseSeal Logo"
+                                src="/favicon_io/apple-touch-icon.png"
+                                className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mix-blend-multiply contrast-125 brightness-110"
+                                alt="MintHR Logo"
                                 priority
                                 width={32}
                                 height={32}
                             />
-                            <span className="text-base sm:text-lg md:text-xl font-bold text-gray-900">PulseSeal</span>
+                            <span className="text-base sm:text-lg md:text-xl font-bold text-gray-900">MintHR</span>
                         </motion.div>
 
                         <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
@@ -529,8 +529,8 @@ const LandingPage: React.FC = () => {
                                     whileTap={{ scale: 0.95 }}
                                     className={`px-3 xl:px-4 py-2 rounded-full transition-all duration-300 font-medium text-sm ${
                                         activeSection === item.id
-                                            ? "bg-blue-50 text-blue-600 shadow-sm"
-                                            : "text-gray-600 hover:text-blue-600 hover:bg-blue-50/50"
+                                            ? "bg-emerald-50 text-emerald-600 shadow-sm"
+                                            : "text-gray-600 hover:text-emerald-600 hover:bg-emerald-50/50"
                                     }`}
                                     onClick={() => scrollToSection(item.id)}
                                     type="button"
@@ -579,106 +579,137 @@ const LandingPage: React.FC = () => {
                 </div>
             </motion.nav>
 
-            <section className="relative pt-16 sm:pt-20 md:pt-24 lg:pt-32 pb-8 sm:pb-12 md:pb-16 lg:pb-20 px-3 sm:px-4 md:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
-                        <div className="space-y-4 sm:space-y-6 lg:space-y-8 text-center lg:text-left">
+            <section className="relative pt-24 lg:pt-32 pb-32 lg:pb-48 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto">
+                <div className="relative bg-gradient-to-br from-emerald-800 via-emerald-900 to-slate-900 rounded-[2rem] sm:rounded-[3rem] px-6 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-28 shadow-2xl shadow-emerald-900/20">
+                    {/* Background SVG shapes & glowing effects */}
+                    <div className="absolute inset-0 rounded-[2rem] sm:rounded-[3rem] overflow-hidden pointer-events-none">
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay"
+                        >
+                            <source src="/hero.mp4" type="video/mp4" />
+                        </video>
+                        <div className="absolute top-[20%] -left-[10%] w-[60%] h-[60%] rounded-full bg-emerald-400/10 blur-[100px]" />
+                        <div className="absolute bottom-[10%] -right-[10%] w-[50%] h-[70%] rounded-full bg-slate-500/20 blur-[120px]" />
+                    </div>
+
+                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center lg:items-start lg:pb-16">
+                        <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
                             <motion.div
-                                initial={{ opacity: 0, x: -50 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, ease: "easeOut" }}
                             >
-                                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                                    <motion.span
-                                        className="block text-gray-900"
-                                        initial={{ opacity: 0.3 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ duration: 1.5, delay: 0.5 }}
-                                    >
-                                        Discipline & Performance.
-                                    </motion.span>
-                                    <motion.span
-                                        className="block text-blue-600 mt-1 sm:mt-2"
-                                        initial={{ opacity: 0.3 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ duration: 1.5, delay: 0.8 }}
-                                    >
-                                        Delivered Daily.
-                                    </motion.span>
+
+                                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white tracking-tight leading-[1.1]">
+                                    Elevate Your<br className="hidden lg:block" />
+                                    Team&apos;s Output.<br className="hidden lg:block" />
+                                    Effortlessly.
                                 </h1>
                             </motion.div>
-
-                            <motion.p
-                                className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0"
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 1 }}
-                            >
-                                PulseSeal is your all-in-one task-based performance tracker for hybrid teams.
-                                Transform accountability into achievement.
-                            </motion.p>
                         </div>
 
-                        <motion.div
-                            className="relative mt-6 sm:mt-8 lg:mt-0"
-                            initial={{ opacity: 0, x: 50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 1, delay: 0.6 }}
-                        >
-                            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8 shadow-2xl">
-                                <div className="bg-white rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-6 space-y-2 sm:space-y-3 md:space-y-4">
-                                    <div className="flex items-center justify-between">
-                                        <div className="text-xs sm:text-sm font-medium text-gray-900">Today&apos;s Performance</div>
-                                        <div className="flex space-x-1 sm:space-x-2">
-                                            <motion.div
-                                                className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-400"
-                                                animate={{ scale: [1, 1.3, 1] }}
-                                                transition={{ repeat: Infinity, duration: 2 }}
-                                            />
-                                            <motion.div
-                                                className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-400"
-                                                animate={{ scale: [1, 1.3, 1] }}
-                                                transition={{ repeat: Infinity, duration: 2, delay: 0.3 }}
-                                            />
-                                            <motion.div
-                                                className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-400"
-                                                animate={{ scale: [1, 1.3, 1] }}
-                                                transition={{ repeat: Infinity, duration: 2, delay: 0.6 }}
-                                            />
-                                        </div>
+                        <div className="lg:col-span-5 space-y-8 text-center lg:text-left pt-2 lg:pt-16">
+                            <motion.p
+                                className="text-base sm:text-lg lg:text-xl text-emerald-50 leading-relaxed font-medium max-w-md mx-auto lg:mx-0"
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                            >
+                                MintHR aligns your workforce with smart task tracking, automated approvals, and real-time insights—empowering teams to scale faster, together.
+                            </motion.p>
+                            
+                            <motion.div 
+                                className="flex flex-wrap items-center justify-center lg:justify-start gap-4"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                            >
+                                <button className="px-6 py-3 rounded-full bg-emerald-500 text-white font-semibold hover:bg-emerald-400 transition-colors shadow-lg hover:shadow-xl text-sm sm:text-base border border-emerald-400">
+                                    Get Started
+                                </button>
+                                <button className="px-6 py-3 rounded-full bg-white text-emerald-950 font-semibold hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl text-sm sm:text-base">
+                                    Book a Demo
+                                </button>
+                            </motion.div>
+                        </div>
+                    </div>
+
+                    {/* Overlapping Bottom Cards */}
+                    <div className="absolute -bottom-24 left-0 right-0 w-full px-6 sm:px-12 lg:px-16 z-20 hidden md:block">
+                        <div className="grid grid-cols-3 gap-6 lg:gap-8 w-full max-w-[1200px] mx-auto">
+                            {/* Card 1 */}
+                            <motion.div 
+                                className="bg-white rounded-3xl p-6 shadow-[0_16px_40px_rgb(0,0,0,0.08)] border border-gray-100 flex flex-col justify-between h-[180px] hover:-translate-y-2 transition-transform duration-300"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.6 }}
+                            >
+                                <div className="flex justify-between items-start">
+                                    <div className="flex gap-4 items-center">
+                                         <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold text-lg">SJ</div>
+                                         <div>
+                                             <p className="font-bold text-gray-900 text-base">Sarah Jenkins</p>
+                                             <p className="text-xs font-medium text-gray-500">Lead Developer</p>
+                                         </div>
                                     </div>
-                                    <div className="space-y-2 sm:space-y-3">
-                                        <motion.div
-                                            className="flex items-center justify-between p-2 sm:p-3 bg-green-50 rounded-lg"
-                                            initial={{ x: -20, opacity: 0 }}
-                                            animate={{ x: 0, opacity: 1 }}
-                                            transition={{ delay: 1.5, duration: 0.5 }}
-                                        >
-                                            <div className="text-xs sm:text-sm font-medium text-gray-700">Task Completion</div>
-                                            <div className="text-green-600 font-bold text-sm sm:text-base">85%</div>
-                                        </motion.div>
-                                        <motion.div
-                                            className="flex items-center justify-between p-2 sm:p-3 bg-blue-50 rounded-lg"
-                                            initial={{ x: -20, opacity: 0 }}
-                                            animate={{ x: 0, opacity: 1 }}
-                                            transition={{ delay: 1.7, duration: 0.5 }}
-                                        >
-                                            <div className="text-xs sm:text-sm font-medium text-gray-700">Team Approval Rate</div>
-                                            <div className="text-blue-600 font-bold text-sm sm:text-base">92%</div>
-                                        </motion.div>
-                                        <motion.div
-                                            className="flex items-center justify-between p-2 sm:p-3 bg-purple-50 rounded-lg"
-                                            initial={{ x: -20, opacity: 0 }}
-                                            animate={{ x: 0, opacity: 1 }}
-                                            transition={{ delay: 1.9, duration: 0.5 }}
-                                        >
-                                            <div className="text-xs sm:text-sm font-medium text-gray-700">On-Time Delivery</div>
-                                            <div className="text-purple-600 font-bold text-sm sm:text-base">98%</div>
-                                        </motion.div>
-                                    </div>
+                                    <div className="px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-xs font-bold whitespace-nowrap">Top Performer</div>
                                 </div>
-                            </div>
-                        </motion.div>
+                                <div className="flex flex-wrap gap-2 mt-4">
+                                     <span className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 rounded-full text-xs font-medium text-gray-600 border border-gray-100"><Zap className="w-3.5 h-3.5 text-yellow-500"/> React</span>
+                                     <span className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 rounded-full text-xs font-medium text-gray-600 border border-gray-100"><Target className="w-3.5 h-3.5 text-blue-500"/> Node.js</span>
+                                </div>
+                            </motion.div>
+                            
+                            {/* Card 2 */}
+                            <motion.div 
+                                className="bg-white rounded-3xl p-6 shadow-[0_16px_40px_rgb(0,0,0,0.08)] border border-gray-100 flex flex-col justify-between h-[180px] hover:-translate-y-2 transition-transform duration-300"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.7 }}
+                            >
+                                <div className="flex justify-between items-start">
+                                    <div className="flex gap-4 items-center">
+                                         <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold text-lg">DC</div>
+                                         <div>
+                                             <p className="font-bold text-gray-900 text-base">David Chen</p>
+                                             <p className="text-xs font-medium text-gray-500">Product Manager</p>
+                                         </div>
+                                    </div>
+                                    <div className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold whitespace-nowrap">On Track</div>
+                                </div>
+                                <div className="flex flex-wrap gap-2 mt-4">
+                                     <span className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 rounded-full text-xs font-medium text-gray-600 border border-gray-100"><Target className="w-3.5 h-3.5 text-emerald-500"/> Strategy</span>
+                                     <span className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 rounded-full text-xs font-medium text-gray-600 border border-gray-100"><Zap className="w-3.5 h-3.5 text-orange-500"/> Agile</span>
+                                </div>
+                            </motion.div>
+                            
+                            {/* Card 3 */}
+                            <motion.div 
+                                className="bg-white rounded-3xl p-6 shadow-[0_16px_40px_rgb(0,0,0,0.08)] border border-gray-100 flex flex-col justify-between h-[180px] hover:-translate-y-2 transition-transform duration-300"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.8 }}
+                            >
+                                <div className="flex justify-between items-start">
+                                    <div className="flex gap-4 items-center">
+                                         <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 font-bold text-lg">ER</div>
+                                         <div>
+                                             <p className="font-bold text-gray-900 text-base">Elena Rios</p>
+                                             <p className="text-xs font-medium text-gray-500">UI/UX Designer</p>
+                                         </div>
+                                    </div>
+                                    <div className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-bold whitespace-nowrap">Creative Lead</div>
+                                </div>
+                                <div className="flex flex-wrap gap-2 mt-4">
+                                     <span className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 rounded-full text-xs font-medium text-gray-600 border border-gray-100"><Star className="w-3.5 h-3.5 text-yellow-500 fill-yellow-500"/> Figma</span>
+                                     <span className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 rounded-full text-xs font-medium text-gray-600 border border-gray-100"><Star className="w-3.5 h-3.5 text-pink-500"/> Framer</span>
+                                </div>
+                            </motion.div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -687,7 +718,7 @@ const LandingPage: React.FC = () => {
                 <div className="max-w-7xl mx-auto">
                     <AnimatedText className="text-center mb-8 sm:mb-12 lg:mb-16">
                         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4">
-                            Why Choose PulseSeal?
+                            Why Choose MintHR?
                         </h2>
                         <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-2 sm:px-4">
                             Built specifically for modern hybrid teams who demand accountability and results.
@@ -707,7 +738,7 @@ const LandingPage: React.FC = () => {
                                 description: "Every task completion requires proof upload and manager approval for complete transparency."
                             },
                             {
-                                icon: <BarChart3 className="w-8 h-8 sm:w-10 sm:h-10 text-blue-500" />,
+                                icon: <BarChart3 className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-500" />,
                                 title: "Track. Approve. Improve.",
                                 description: "Visual signal lights (Red/Yellow/Green) show real-time status with actionable improvement suggestions."
                             }
@@ -734,7 +765,7 @@ const LandingPage: React.FC = () => {
                 <div className="max-w-7xl mx-auto w-full">
                     <FillOnScrollText className="text-center mb-6 sm:mb-8 lg:mb-12">
                         <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
-                            Powerful Features for <span className="text-blue-600">Peak Performance</span>
+                            Powerful Features for <span className="text-emerald-600">Peak Performance</span>
                         </h2>
                         <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto px-2 sm:px-4">
                             Everything your team needs to stay accountable, productive, and continuously improving.
@@ -763,7 +794,7 @@ const LandingPage: React.FC = () => {
                 <div className="max-w-6xl mx-auto w-full">
                     <FillOnScrollText className="text-center mb-6 sm:mb-8 lg:mb-12">
                         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4">
-                            Simple Plans, <span className="text-blue-600">Powerful Outcomes</span>
+                            Simple Plans, <span className="text-emerald-600">Powerful Outcomes</span>
                         </h2>
                         <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
                             Choose the perfect plan to transform your team&apos;s productivity and accountability.
@@ -787,7 +818,7 @@ const LandingPage: React.FC = () => {
                                                     animate={{ scale: 1, opacity: 1 }}
                                                     transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
                                                 >
-                          <span className="bg-gradient-to-r from-[#df658c] to-[#656beb] text-white px-2 sm:px-3 md:px-4 py-1 rounded-full text-xs font-bold shadow-lg">
+                          <span className="bg-gradient-to-r from-emerald-500 to-emerald-700 text-white px-2 sm:px-3 md:px-4 py-1 rounded-full text-xs font-bold shadow-lg">
                             Most Popular
                           </span>
                                                 </motion.div>
@@ -856,7 +887,7 @@ const LandingPage: React.FC = () => {
                             transition={{ duration: 0.8 }}
                             viewport={{ once: true, margin: "-100px" }}
                         >
-                            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8 shadow-2xl">
+                            <div className="bg-gradient-to-br from-slate-800 to-emerald-900 rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8 shadow-2xl">
                                 <motion.div
                                     className="w-full h-48 sm:h-64 md:h-72 lg:h-80 rounded-lg sm:rounded-xl overflow-hidden shadow-lg flex items-center justify-center"
                                     initial={{ opacity: 0, y: 20 }}
@@ -890,11 +921,11 @@ const LandingPage: React.FC = () => {
                         >
                             <FillOnScrollText>
                                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-                                    Experience the PulseSeal Demo
+                                    Experience the MintHR Demo
                                 </h2>
                             </FillOnScrollText>
                             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                                Discover how PulseSeal transforms team productivity through intuitive task tracking and real-time performance insights. This demo showcases the application&apos;s seamless interface, intelligent accountability features, and powerful reporting tools – empowering your team to achieve peak performance every day.
+                                Discover how MintHR transforms team productivity through intuitive task tracking and real-time performance insights. This demo showcases the application&apos;s seamless interface, intelligent accountability features, and powerful reporting tools – empowering your team to achieve peak performance every day.
                             </p>
                         </motion.div>
                     </div>
@@ -905,7 +936,7 @@ const LandingPage: React.FC = () => {
                 <div className="max-w-7xl mx-auto">
                     <FillOnScrollText>
                         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 text-center">
-                            Transform Your Team&apos;s <span className="text-blue-600">Performance Today</span>
+                            Transform Your Team&apos;s <span className="text-emerald-600">Performance Today</span>
                         </h2>
                     </FillOnScrollText>
 
@@ -921,10 +952,10 @@ const LandingPage: React.FC = () => {
                                 {benefits.map((benefit, index) => (
                                     <StaggerItem key={index}>
                                         <motion.div
-                                            className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 p-3 sm:p-4 md:p-5 rounded-lg sm:rounded-xl md:rounded-2xl hover:bg-blue-50 transition-all duration-300 text-center sm:text-left"
+                                            className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 p-3 sm:p-4 md:p-5 rounded-lg sm:rounded-xl md:rounded-2xl hover:bg-emerald-50 transition-all duration-300 text-center sm:text-left"
                                             whileHover={{ x: typeof window !== 'undefined' && window.innerWidth >= 640 ? 10 : 0 }}
                                         >
-                                            <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg sm:rounded-xl md:rounded-2xl flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0">
+                                            <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-br from-slate-800 to-emerald-900 rounded-lg sm:rounded-xl md:rounded-2xl flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0">
                                                 <span className="text-white font-bold text-xs sm:text-sm">{benefit.stat}</span>
                                             </div>
                                             <div>
@@ -944,7 +975,7 @@ const LandingPage: React.FC = () => {
                             transition={{ duration: 0.8 }}
                             viewport={{ once: true, margin: "-100px" }}
                         >
-                            <div className="bg-gradient-to-br from-blue-600 to-purple-600  rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8 shadow-2xl">
+                            <div className="bg-gradient-to-br from-slate-800 to-emerald-900  rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8 shadow-2xl">
                                 <div className="bg-white backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-6 space-y-3 sm:space-y-4 md:space-y-6">
                                     <div className="text-center">
                                         <div className="text-black font-bold text-sm sm:text-base md:text-lg mb-1 sm:mb-2">Live Performance Dashboard</div>
@@ -1000,7 +1031,7 @@ const LandingPage: React.FC = () => {
                             Get in Touch with Our Support Team
                         </h2>
                         <p className="text-xs sm:text-sm md:text-base text-[#6C757D] leading-relaxed max-w-2xl mx-auto font-sans px-2">
-                            Have questions about PulseSeal? We&apos;re here to help!
+                            Have questions about MintHR? We&apos;re here to help!
                         </p>
                     </AnimatedText>
 
@@ -1080,13 +1111,13 @@ const LandingPage: React.FC = () => {
 
                             <div className="space-y-2 sm:space-y-3 md:space-y-4 mb-3 sm:mb-4 md:mb-6">
                                 <motion.div
-                                    className="flex items-center gap-2 sm:gap-3 p-2 sm:p-2.5 md:p-3 rounded-lg bg-gray-50 hover:bg-blue-50 transition-all duration-300"
+                                    className="flex items-center gap-2 sm:gap-3 p-2 sm:p-2.5 md:p-3 rounded-lg bg-gray-50 hover:bg-emerald-50 transition-all duration-300"
                                     whileHover={{ scale: 1.01 }}
                                 >
                                     <div
                                         className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center flex-shrink-0"
                                         style={{
-                                            background: 'linear-gradient(135deg, #0B5ED7 0%, #2E8CFF 100%)',
+                                            background: 'linear-gradient(135deg, #10b981 0%, #064e3b 100%)',
                                             boxShadow: '0 3px 10px rgba(11, 94, 215, 0.3)'
                                         }}
                                     >
@@ -1095,22 +1126,22 @@ const LandingPage: React.FC = () => {
                                     <div className="min-w-0 flex-1">
                                         <p className="text-[#6C757D] font-medium mb-0.5 font-sans text-xs">Email Support</p>
                                         <a
-                                            href="mailto:support@pulseseal.in"
+                                            href="mailto:demo@minthr.com"
                                             className="text-[#0B5ED7] hover:text-[#094BB8] transition-colors font-semibold font-sans text-xs sm:text-sm break-all"
                                         >
-                                            support@pulseseal.in
+                                            demo@minthr.com
                                         </a>
                                     </div>
                                 </motion.div>
 
                                 <motion.div
-                                    className="flex items-center gap-2 sm:gap-3 p-2 sm:p-2.5 md:p-3 rounded-lg bg-gray-50 hover:bg-blue-50 transition-all duration-300"
+                                    className="flex items-center gap-2 sm:gap-3 p-2 sm:p-2.5 md:p-3 rounded-lg bg-gray-50 hover:bg-emerald-50 transition-all duration-300"
                                     whileHover={{ scale: 1.01 }}
                                 >
                                     <div
                                         className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center flex-shrink-0"
                                         style={{
-                                            background: 'linear-gradient(135deg, #0B5ED7 0%, #2E8CFF 100%)',
+                                            background: 'linear-gradient(135deg, #10b981 0%, #064e3b 100%)',
                                             boxShadow: '0 3px 10px rgba(11, 94, 215, 0.3)'
                                         }}
                                     >
@@ -1119,10 +1150,10 @@ const LandingPage: React.FC = () => {
                                     <div>
                                         <p className="text-[#6C757D] font-medium mb-0.5 font-sans text-xs">Phone Support</p>
                                         <a
-                                            href="tel:+918095332013"
+                                            href="tel:+911234567890"
                                             className="text-[#0B5ED7] hover:text-[#094BB8] transition-colors font-semibold font-sans text-xs sm:text-sm"
                                         >
-                                            +91 8095332013
+                                            +91 1234567890
                                         </a>
                                     </div>
                                 </motion.div>
@@ -1143,12 +1174,12 @@ const LandingPage: React.FC = () => {
                                     <div>
                                         <p className="text-[#6C757D] font-medium mb-0.5 font-sans text-xs">WhatsApp</p>
                                         <a
-                                            href="https://wa.me/918095332013"
+                                            href="https://wa.me/911234567890"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-[#27AE60] hover:text-[#229954] transition-colors font-semibold font-sans text-xs sm:text-sm"
                                         >
-                                            +91 8095332013
+                                            +91 1234567890
                                         </a>
                                     </div>
                                 </motion.div>
@@ -1188,13 +1219,13 @@ const LandingPage: React.FC = () => {
                         >
                             <div className="flex items-center gap-1.5 sm:gap-2 mb-3 sm:mb-4 justify-center sm:justify-start">
                                 <Image
-                                    src={logo2}
-                                    className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8"
-                                    alt="PulseSeal"
+                                    src="/favicon_io/apple-touch-icon.png"
+                                    className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mix-blend-multiply contrast-125 brightness-110"
+                                    alt="MintHR"
                                     width={32}
                                     height={32}
                                 />
-                                <span className="text-base sm:text-lg md:text-xl font-bold text-gray-900">PulseSeal</span>
+                                <span className="text-base sm:text-lg md:text-xl font-bold text-gray-900">MintHR</span>
                             </div>
                             <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed text-center sm:text-left">
                                 Empowering teams to achieve peak performance through intelligent
@@ -1217,7 +1248,7 @@ const LandingPage: React.FC = () => {
                                         <li key={linkIndex}>
                                             <a
                                                 href={link.href}
-                                                className="hover:text-blue-600 transition-colors duration-200 text-xs sm:text-sm md:text-base"
+                                                className="hover:text-emerald-600 transition-colors duration-200 text-xs sm:text-sm md:text-base"
                                             >
                                                 {link.label}
                                             </a>
@@ -1236,7 +1267,7 @@ const LandingPage: React.FC = () => {
                         viewport={{ once: true }}
                     >
                         <p className="text-gray-500 text-xs sm:text-sm md:text-base">
-                            &copy; 2025 GIBY Technologies Pvt Ltd. All rights reserved.
+                            &copy; 2025 Anonx technologies. All rights reserved.
                         </p>
                     </motion.div>
                 </div>
