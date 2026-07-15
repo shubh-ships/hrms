@@ -1,0 +1,37 @@
+# Node dependencies
+node_modules
+npm-debug.log
+yarn.lock
+pnpm-lock.yaml
+
+# Logs
+*.log
+logs/
+*.pid
+
+# Git
+.git
+.gitignore
+
+# Environment files
+.env
+.env.*  # ignore all env files if you load via Docker/CI instead
+
+# Docker-related
+docker-compose.yml
+docker-compose.prod.yml
+Dockerfile.dev
+.dockerignore
+
+# Editor/OS files
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+*.swp
+
+# Test files
+coverage
+__tests__/
+*.test.js
+*.spec.js
